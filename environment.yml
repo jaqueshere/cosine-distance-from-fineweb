@@ -1,0 +1,10 @@
+name: LLM_originality
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - chromadb
+  - sentence-transformers
+  - datasets
+prefix: /opt/miniconda3/envs/LLM_originality
