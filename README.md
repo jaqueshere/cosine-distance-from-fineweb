@@ -5,6 +5,7 @@ How it works:
 This script downloads a 1000-document sample from the fineweb-edu corpus. The corpus will be embedded in using a BERT transformer model. The script then breaks the text into into 400-word chunks to stay within the model's context window. The 'bge-base-en-v1.5' BERT transformer model is used to embed the corpus in a 768-dimension vector space, and the embeddings are stored in a chroma database. Finally, chroma calculates the cosine distance of a text from each document in the corpus and returns the smallest distance, which is taken as an approximation of the text's originality.
 
 Usage notes: 
+Use the environment.yml file with miniconda to set up an environment to run the script.
 The script requires an 'output' folder, where it will write a record for each comparison. Create an 'output' folder in the same directory as the script before running it.
 On each run, you may compare as many texts to the corpus as you like. But the script downloads the entire 1000-document corpus on each run. To use the script efficiently, choose the documents you want to compare before running the script, and only run the script once. 
 Depending on the speed of your CPU, embeddings may take some time. Plan to take a coffee break while it is running.
